@@ -8,22 +8,59 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RemoveLineGroups.Properties
-{
-
-
+namespace RemoveLineGroups.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\FOXLOGS\\Discovery\\00536085\\TXPlay#1\\20160701.LOG")]
+        public string File {
+            get {
+                return ((string)(this["File"]));
+            }
+            set {
+                this["File"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>&lt;MetaData&gt;</string>\r\n  <string>Stack Trace</string>\r\n</ArrayOfString" +
+            ">")]
+        public global::System.Collections.Specialized.StringCollection Phrase1 {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Phrase1"]));
+            }
+            set {
+                this["Phrase1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>&lt;/MetaData&gt;</string>\r\n  <string>NULL</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection Phrase2 {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Phrase2"]));
+            }
+            set {
+                this["Phrase2"] = value;
             }
         }
     }

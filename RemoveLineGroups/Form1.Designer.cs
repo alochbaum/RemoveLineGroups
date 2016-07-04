@@ -139,6 +139,7 @@
             this.Controls.Add(this.btnSelectFile);
             this.Name = "Form1";
             this.Text = "Remove Group of Lines From File";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
