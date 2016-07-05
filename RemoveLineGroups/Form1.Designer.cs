@@ -33,11 +33,15 @@
             this.btGo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PhraseInFirstLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhraseInLastLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnAddRow = new System.Windows.Forms.Button();
             this.btnDelRow = new System.Windows.Forms.Button();
+            this.btnImportRows = new System.Windows.Forms.Button();
+            this.btnExportRows = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,14 +87,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(689, 294);
             this.dataGridView1.TabIndex = 2;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 383);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(689, 169);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
             // PhraseInFirstLine
             // 
             this.PhraseInFirstLine.HeaderText = "Phrase in first line of group";
@@ -104,6 +100,14 @@
             this.PhraseInLastLine.Name = "PhraseInLastLine";
             this.PhraseInLastLine.ReadOnly = true;
             this.PhraseInLastLine.Width = 320;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 383);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(689, 169);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
             // 
             // btnAddRow
             // 
@@ -125,6 +129,36 @@
             this.btnDelRow.UseVisualStyleBackColor = true;
             this.btnDelRow.Click += new System.EventHandler(this.btnDelRow_Click);
             // 
+            // btnImportRows
+            // 
+            this.btnImportRows.Location = new System.Drawing.Point(604, 350);
+            this.btnImportRows.Name = "btnImportRows";
+            this.btnImportRows.Size = new System.Drawing.Size(97, 27);
+            this.btnImportRows.TabIndex = 0;
+            this.btnImportRows.Text = "Import All Rows";
+            this.btnImportRows.UseVisualStyleBackColor = true;
+            this.btnImportRows.Click += new System.EventHandler(this.btnImportRows_Click);
+            // 
+            // btnExportRows
+            // 
+            this.btnExportRows.Location = new System.Drawing.Point(501, 350);
+            this.btnExportRows.Name = "btnExportRows";
+            this.btnExportRows.Size = new System.Drawing.Size(97, 27);
+            this.btnExportRows.TabIndex = 0;
+            this.btnExportRows.Text = "Export All Rows";
+            this.btnExportRows.UseVisualStyleBackColor = true;
+            this.btnExportRows.Click += new System.EventHandler(this.btnExportRows_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Test.XML";
+            this.saveFileDialog1.Filter = "XML files (*.xml)|*.xml";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.Filter = "XML files (*.xml)|*.xml";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +168,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tbFile);
             this.Controls.Add(this.btGo);
+            this.Controls.Add(this.btnExportRows);
+            this.Controls.Add(this.btnImportRows);
             this.Controls.Add(this.btnDelRow);
             this.Controls.Add(this.btnAddRow);
             this.Controls.Add(this.btnSelectFile);
@@ -158,6 +194,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PhraseInLastLine;
         private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.Button btnDelRow;
+        private System.Windows.Forms.Button btnImportRows;
+        private System.Windows.Forms.Button btnExportRows;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 
