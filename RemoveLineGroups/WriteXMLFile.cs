@@ -25,6 +25,18 @@ namespace RemoveLineGroups
             return;
         }
         #endregion
+        #region Get Strings At Locations
+        public string GetStart(int iLocation)
+        {
+            if (iLocation > (myStrStart.Count - 1) || iLocation < 0) return "Error: Getting Start";
+            return myStrStart.ElementAt(iLocation);
+        }
+        public string GetEnd(int iLocation)
+        {
+            if (iLocation > (myStrEnd.Count - 1) || iLocation < 0) return "Error: Getting Start";
+            return myStrEnd.ElementAt(iLocation);
+        }
+        #endregion
         public bool WriteDFile(string strOutFile)
         {
             try
@@ -84,8 +96,11 @@ namespace RemoveLineGroups
                 }
                 reader.Close();
             }
+            iCountOfRows = myStrEnd.Count;
+            // check if their empty
+            if (iCountOfRows < 1) return false;
             // check if the counts are not equal
-            if (myStrStart.Count != myStrEnd.Count) return false;
+            if (myStrStart.Count != iCountOfRows) return false;
             return true;
         }
     }

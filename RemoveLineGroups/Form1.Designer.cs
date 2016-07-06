@@ -42,6 +42,7 @@
             this.btnExportRows = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.btnClearAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,6 +160,16 @@
             this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.Filter = "XML files (*.xml)|*.xml";
             // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(176, 350);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(85, 27);
+            this.btnClearAll.TabIndex = 0;
+            this.btnClearAll.Text = "Clear All Rows";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +181,7 @@
             this.Controls.Add(this.btGo);
             this.Controls.Add(this.btnExportRows);
             this.Controls.Add(this.btnImportRows);
+            this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnDelRow);
             this.Controls.Add(this.btnAddRow);
             this.Controls.Add(this.btnSelectFile);
@@ -198,6 +210,7 @@
         private System.Windows.Forms.Button btnExportRows;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Button btnClearAll;
     }
 }
 
