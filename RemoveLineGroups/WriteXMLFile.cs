@@ -64,37 +64,28 @@ namespace RemoveLineGroups
             {
                 while (reader.Read())
                 {
-                    // Only detect RemoveGroup
+                    // Get all the elements but only act on 2
                     if (reader.IsStartElement())
                     {
-                        if(reader.Name=="RemoveGroup")
+                        switch(reader.Name.ToString())
                         {
-                            // read StartPhrase add to string
-                            reader.Read();
-                            if(reader.Name == "StartPhrase")
-                            {
-                                myStrStart.Add(reader.Value.TrimStart());
-                            }
-                            else
-                            {
-                                // wasn't expecting this
-                                return false;
-                            }
-                            // read EndPhrase add to string
-                            reader.Read();
-                            if (reader.Name == "EndPhrase")
-                            {
-                                myStrStart.Add(reader.Value.TrimStart());
-                            }
-                            else
-                            {
-                                // wasn't expecting this
-                                return false;
-                            }
+                            case "StartPhrase":
+                                myStrStart.Add(reader.ReadElementContentAsString());  // this moves to next node so check if next node is EndPhrase
+                                if(reader.Name.ToString()=="EndPhrase")
+                                    myStrEnd.Add(reader.ReadElementContentAsString());
+                            break;
+                            case "EndPhrase":
+                                myStrEnd.Add(reader.ReadElementContentAsString());
+                            break;
+                            default:
+                            break;
                         }
                     }
                 }
+                reader.Close();
             }
+            // check if the counts are not equal
+            if (myStrStart.Count != myStrEnd.Count) return false;
             return true;
         }
     }
